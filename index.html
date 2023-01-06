@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portifolio</title>
+    <title>Nogueira Dev</title>
+    <link rel="website icon" type="png" href="images/ND-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/bb55ee501d.js" crossorigin="anonymous"></script>
 </head>
@@ -16,18 +17,22 @@
         <div class="container">
             <nav>
                 <img src="images/NogueiraLogo.png" class="logo" alt="">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portifolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#portifolio">Portifólio</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <i class="fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+              
             </nav>
 
             <div class="header-text">
                 <p>Front-End Developer</p>
-                <h1>Hi, I'm <span>Pedro Nogueira</span><br> from Brazil</h1>
+                <h1>Olá Mundo! eu sou o <span><br>Pedro Nogueira</span> </h1>
 
             </div>
 
@@ -42,15 +47,15 @@
                     <img src="images/user.png" alt="">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
+                    <h1 class="sub-title">Sobre Mim</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque at tempora saepe possimus!
                         Temporibus sint repellat placeat. Ut, tempora quia reiciendis quisquam ad blanditiis omnis
                         ducimus architecto explicabo aliquid voluptatibus?</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experiência</p>
+                        <p class="tab-links" onclick="opentab('education')">Formação</p>
 
                     </div>
 
@@ -84,13 +89,13 @@
 
     <!-- Services -->
 
-    <div class="services">
+    <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
+            <h1 class="sub-title">Meus Serviços</h1>
             <div class="services-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
-                    <h2>Web Development</h2>
+                    <h2>Desenvolvimento Web</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt eius sint soluta.
                         Officia magnam provident, ut iusto nobis distinctio voluptas odit quo dolores omnis architecto
                         illum debitis beatae perferendis!</p>
@@ -99,7 +104,7 @@
 
                 <div>
                     <i class="fa-solid fa-pen-nib"></i>
-                    <h2>UI/UX Design</h2>
+                    <h2>Design</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt eius sint soluta.
                         Officia magnam provident, ut iusto nobis distinctio voluptas odit quo dolores omnis architecto
                         illum debitis beatae perferendis!</p>
@@ -108,7 +113,7 @@
 
                 <div>
                     <i class="fa-brands fa-app-store"></i>
-                    <h2>App Development</h2>
+                    <h2>Desenvolvimento Mobile</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt eius sint soluta.
                         Officia magnam provident, ut iusto nobis distinctio voluptas odit quo dolores omnis architecto
                         illum debitis beatae perferendis!</p>
@@ -200,7 +205,7 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1>Contact Me</h1>
+                    <h1>Fale Comigo</h1>
                     <p> <i class="fa-sharp fa-solid fa-paper-plane"></i> pedro.nogueira.barboza@gmail.com</p>
                     <p> <i class="fa-solid fa-phone"></i> +55 (35) 99954-5259</p>
                     <div class="social-icons">
@@ -216,10 +221,15 @@
                     <form>
                         <input type="text" name="Name" placeholder="Seu Nome" required>
                         <input type="email" name="email" placeholder="Seu Email" required>
-                        <textarea name="Message" id="" rows="6">Sua Mensagem</textarea>
+                        <textarea name="Message" id="" rows="6" placeholder="Sua Mensagem"></textarea>
                         <button type="submit" class="btn btn2">Enviar</button>
                     </form>
                 </div>
+            </div>
+        </div>
+        <div>
+            <div class="copyright">
+                <p>Copyright © Nogueira Dev</p>
             </div>
         </div>
     </div>
@@ -262,6 +272,20 @@
            
             
         }
+    </script>
+
+    <script>
+         var sidemenu = document.getElementById("sidemenu")
+
+         function openmenu(){
+            sidemenu.style.right = "0"
+
+         }
+
+         function closemenu(){
+            sidemenu.style.right = "-200px"
+            
+         }
     </script>
 
 </body>

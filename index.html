@@ -164,7 +164,7 @@
             <div class="all-work-list active-tab" id="all-list">
 
                 <div class="work">
-                    <img src="images/CalculatorProject.png" alt="">
+                    <img src="images/TicTacToeProject.png" alt="">
                     <div class="layer">
                         <h3>BarberShop Page</h3>
                         <p>Uma landing page de uma barbearia.</p>
@@ -173,13 +173,15 @@
                 </div>
 
                 <div class="work">
-                    <img src="images/TicTacToeProject.png" alt="">
+                    <img src="images/CalculatorProject.png" alt="">
                     <div class="layer">
                         <h3>BarberShop Page</h3>
                         <p>Uma landing page de uma barbearia.</p>
                         <a href="https://www.google.com.br"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
+
+                
 
                 <div class="work">
                     <img src="images/FlowSecurityProject.png" alt="">
@@ -219,11 +221,15 @@
                 </div>
                 <div class="contact-right">
                     <form>
-                        <input type="text" name="Name" placeholder="Seu Nome" required>
-                        <input type="email" name="email" placeholder="Seu Email" required>
-                        <textarea name="Message" id="" rows="6" placeholder="Sua Mensagem"></textarea>
-                        <button type="submit" class="btn btn2">Enviar</button>
+                        <input type="text" id="name" name="Name" placeholder="Seu Nome" required>
+                        <input type="number" id="phone" name="cellphone" placeholder="Seu Número" required>
+                        <input type="email" name="email" id="email" placeholder="Seu email">
+                        <textarea name="message" id="message" rows="6" placeholder="Sua Mensagem"></textarea>
+                        
+                      
                     </form>
+                    <button onclick="SendEmail()" class="btn btn2">Enviar</button>
+                    
                 </div>
             </div>
         </div>
@@ -240,6 +246,36 @@
         var tabcontents = document.getElementsByClassName("tab-contents")
         var tabworks = document.getElementsByClassName("all-worklist")
         var changelist = false
+
+        function SendEmail(){
+            if(document.getElementById("name").value !="" &&document.getElementById("email").value !="" && document.getElementById("phone").value !="" &&document.getElementById("message").value !=""){
+                fetch("https://formsubmit.co/ajax/pedro.nogueira.barboza@gmail.com", {
+                                        method: "POST",
+                                        headers: { 
+                                            'Content-Type': 'application/json',
+                                            'Accept': 'application/json'  
+                            },
+                            body: JSON.stringify({
+                                Nome: document.getElementById("name").value,
+                                Celular: document.getElementById("phone").value,
+                                Email: document.getElementById("email").value,
+                                Mensagem: document.getElementById("message").value
+                            })
+                        })
+                            .then(response => response.json())
+                            .then(data => {if(data.message =="The form was submitted successfully."){
+                                alert("Envio Feito com sucesso")
+                           }})
+                            .catch(error => console.log(error));
+
+                           
+            }
+
+            else{
+                alert("Preencha todos os campos!")
+            }
+                                  
+        }
 
         function opentab(tabname) {
             for (tablink of tablinks) {
@@ -287,6 +323,10 @@
             
          }
     </script>
+
+    
+
+
 
 </body>
 

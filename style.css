@@ -267,7 +267,7 @@ nav ul li a:hover::after{
     width: 100%;
     height: 0;
     background: linear-gradient(#29E97B,rgb(124, 245, 99) );
-    color:white;
+    color:black;
     border-radius: 20px;
     position: absolute;
     left: 0;
@@ -291,7 +291,7 @@ nav ul li a:hover::after{
 
 .layer a{
     margin-top: 20px;
-    color:#29E97B;
+    color:black;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;

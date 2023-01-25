@@ -1,5 +1,5 @@
-var tablinks = document.getElementsByClassName("tab-links")
-var tabcontents = document.getElementsByClassName("tab-contents")
+var tablink = document.getElementsByClassName("tab-links")
+var tabcontent = document.getElementsByClassName("tab-contents")
 var tabworks = document.getElementsByClassName("all-worklist")
 var sidemenu = document.getElementById("sidemenu")
 var changelist = false

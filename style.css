@@ -226,6 +226,7 @@ nav ul li a:hover::after{
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+   
 }
 
 .all-work-list.active-tab{
@@ -233,6 +234,8 @@ nav ul li a:hover::after{
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+   
+   
 }
 
 .all-work-list{
@@ -240,12 +243,15 @@ nav ul li a:hover::after{
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+   
+  
 }
 
 .work{
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    
    
     
 }
@@ -260,7 +266,8 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#4169E1 );
+    background: linear-gradient(#29E97B,rgb(124, 245, 99) );
+    color:white;
     border-radius: 20px;
     position: absolute;
     left: 0;
@@ -284,7 +291,7 @@ nav ul li a:hover::after{
 
 .layer a{
     margin-top: 20px;
-    color: #4169E1;
+    color:#29E97B;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -293,6 +300,7 @@ nav ul li a:hover::after{
     height: 60px;
     border-radius: 50%;
     text-align: center;
+   
 }
 
 .work:hover img{
@@ -354,6 +362,7 @@ nav ul li a:hover::after{
 }
 
 .social-icons{
+    
     margin-top: 30px;
 }
 

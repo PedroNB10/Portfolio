@@ -1,3 +1,4 @@
+//variables
 var tablinks = document.getElementsByClassName("tab-links")
 var tabcontents = document.getElementsByClassName("tab-contents")
 var tabworks = document.getElementsByClassName("all-worklist")
